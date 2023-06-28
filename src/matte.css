@@ -1,0 +1,147 @@
+/* colour scheme */
+:root {
+  --text1: #111;
+  --text2: #bbb;
+  --back1: #eee;
+  --back2: #ddd;
+  --back3: #ccc;
+  --main0: #225;
+  --main1: #61b;
+  --main2: #80f;
+}
+html {
+  color: var(--text1);
+  background-color: var(--back1);
+}
+a {
+  color: var(--main1);
+}
+a:hover {
+  color: var(--main2);
+}
+a:visited {
+  color: var(--main0);
+}
+
+/* page width */
+body {
+  margin: 0 auto;
+  padding: 0 0.5em;
+  max-width: 72ch;
+}
+
+/* header */
+header {
+    text-align: center;
+}
+header img {
+    margin: 0px;
+    position: absolute;
+}
+header h1 {
+    margin-bottom: 0.2ex;
+}
+header nav ul {
+    margin-top: 0.2ex;
+}
+nav li {
+    display: inline;
+}
+nav li + li:before{
+    content: "|";
+    margin: 0 0.5em;
+}
+
+/* footer */
+footer {
+  text-align: center;
+}
+
+/* lists */
+ul, ol {
+  margin-left: 0;
+  padding-left: 1em;
+}
+li { /* is this necessary? */
+  padding-left: 0;
+}
+
+/* code blocks */
+pre {
+  background-color: var(--back2);
+  margin: 2ex 0;
+  padding: 1ex 1em;
+  border: 1px solid var(--back3);
+  border-radius: 5px;
+  /* choose: wrapping or scroll bar? */
+  white-space: pre-wrap; /* wrap */
+  /* overflow-x: auto; */ /* scroll */
+}
+
+/* inline code */
+:not(pre) > code {
+  background-color: var(--back2);
+  border: 1px solid var(--back3);
+  border-radius: 3px;
+  padding: 0 0.1em;
+}
+
+/* tables */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-top: 2px solid var(--text2);  
+  border-bottom: 2px solid var(--text2);
+}
+th, td {
+  padding: 1ex 1em;
+}
+th {
+  border-bottom: 2px solid var(--text2);
+}
+tr:hover {
+  background-color: var(--back2);
+}
+
+/* images */
+img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* captions */
+figcaption {
+    padding-top: 1ex;
+    text-align: center;
+}
+
+/* fancy heading markers */
+main h1, main h2 {
+    position: relative;
+}
+main h1::before {
+    content: "~"; /* check the etymology of tilde! */
+    color: var(--text2);
+    position: absolute;
+    left: -1em;
+}
+main h2::after {
+    content: "§"; /* section sign */
+    color: var(--text2);
+    position: absolute;
+    left: -1em;
+}
+
+/* blockquotes */
+blockquote {
+  margin: 3ex 1em 0 1em;
+}
+blockquote p:first-child::before {
+  content: "\275d";
+  font-size: 2rem;
+  display: inline-block;
+  margin: -1ex 0;
+  color: var(--text2);
+}
+/* TODO could try other blocks with other symbols? */

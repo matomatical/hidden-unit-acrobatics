@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@mdx-js/esbuild": "^2.3.0",
+    "katex": "^0.16.7",
+    "mafs": "^0.17.1",
+    "react": "^18.2.0",
+    "react-dev": "^0.0.1",
+    "rehype-katex": "^6.0.3",
+    "remark-math": "^5.1.1"
+  }
+}
